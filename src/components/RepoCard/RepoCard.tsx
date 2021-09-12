@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Stack, Tag, Text, useColorModeValue, VStack } from '@chakra-ui/react';
+import { Box, Stack, Tag, Text, useColorMode, useColorModeValue, VStack } from '@chakra-ui/react';
 import { repoType } from '@/pages/api/github';
 
 interface RepoCardProps {
@@ -8,6 +8,8 @@ interface RepoCardProps {
 }
 
 const RepoCard = ({ repo, i }: RepoCardProps): JSX.Element => {
+  const { colorMode } = useColorMode();
+
   return (
     <Box
       key={i.toString()}
@@ -45,14 +47,21 @@ const RepoCard = ({ repo, i }: RepoCardProps): JSX.Element => {
             {repo.name}
           </Text>
           {repo.language && (
-            <Tag colorScheme='brand' size='sm' ml={2} mt='auto' height='22px'>
+            <Tag
+              bg={colorMode === 'light' ? `brand.2` : `brand.0`}
+              color={colorMode === 'light' ? `brand.1` : `brand.2`}
+              size='sm'
+              ml={2}
+              mt='auto'
+              height='22px'
+            >
               {repo.language}
             </Tag>
           )}
         </Stack>
 
         <Text
-          color={useColorModeValue(`gray.600`, `gray.400`)}
+          color={useColorModeValue(`brand.2`, `brand.0`)}
           justifySelf='center'
           maxWidth='full'
           isTruncated

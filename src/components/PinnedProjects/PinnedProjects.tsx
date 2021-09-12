@@ -52,14 +52,14 @@ const PinnedProjects = ({ repo, projectData, left }: PinnedProjectsProps): JSX.E
             <Stack isInline justifyContent='flex-end' alignItems='center' spacing={4} mr={1}>
               {repo?.html_url && (
                 <Link href={repo?.html_url} passHref>
-                  <ChakraLink isExternal className={`hover-link-${colorMode}`}>
+                  <ChakraLink isExternal color={colorMode === 'light' ? `brand.2` : `brand.1`}>
                     <FaGithub size={23} />
                   </ChakraLink>
                 </Link>
               )}
               {projectData?.deployedLink && (
                 <Link href={projectData.deployedLink} passHref>
-                  <ChakraLink isExternal className={`hover-link-${colorMode}`}>
+                  <ChakraLink isExternal color={colorMode === 'light' ? `brand.2` : `brand.1`}>
                     <FaExternalLinkAlt size={20} />
                   </ChakraLink>
                 </Link>
@@ -69,7 +69,7 @@ const PinnedProjects = ({ repo, projectData, left }: PinnedProjectsProps): JSX.E
         </Flex>
         <Tags tags={projectData?.stack} />
         <Text
-          color={colorMode === 'light' ? `gray.600` : `gray.300`}
+          color={colorMode === 'light' ? `brand.2` : `brand.0`}
           justifySelf='center'
           height='100%'
           width='100%'
