@@ -17,12 +17,12 @@ const RepoCard = ({ repo, i }: RepoCardProps): JSX.Element => {
       w='full'
       border='2px solid'
       borderColor='brand.1'
-      boxShadow='2xl'
+      boxShadow='lg'
       transition='all 0.25s'
       borderRadius='2xl'
       overflow='hidden'
       transitionTimingFunction='spring(1 100 10 10)'
-      _hover={{ transform: `translateY(-4px)`, shadow: `xl` }}
+      _hover={{ transform: `translateY(-4px)`, shadow: `2xl` }}
       backdropFilter='saturate(180%) blur(5px)'
     >
       <VStack
