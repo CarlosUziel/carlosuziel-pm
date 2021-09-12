@@ -1,11 +1,21 @@
 import React from 'react';
-import { Box, Button, Flex, Heading, SimpleGrid, Text, VStack } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  SimpleGrid,
+  Text,
+  VStack,
+  useColorModeValue,
+  chakra,
+} from '@chakra-ui/react';
 import { FaGithub } from 'react-icons/fa';
 import { NextSeo } from 'next-seo';
 import RepoCard from '@/components/RepoCard';
 import PinnedProjects from '@/components/PinnedProjects';
 import { pinnedRepos, pinnedRepoType } from '@/data/pinnedRepos';
-import { repoType } from '@/pages/api/github';
+import { getGHRepos, repoType } from '@/pages/api/github';
 
 interface ProjectsProps {
   stars: number;
@@ -18,47 +28,118 @@ function Projects({ repos }: ProjectsProps): React.ReactElement {
   return (
     <>
       <NextSeo title='Projects' />
-      <Box width='full' px={3} minH='100vh' height='full' mx='auto' maxW='6xl' py='28'>
-        <Flex direction='column' alignItems='center' width='full' px={3} height='full' mx='auto'>
-          <Heading fontSize={{ base: `5xl`, md: `6xl` }} mx='auto' textAlign='center'>
-            My projects
-          </Heading>
-          <Text mt={3}>A quick collection of my projects.</Text>
-          <VStack direction='column' my={16} width='full' height='full' maxWidth='5xl' spacing={10}>
-            {pinnedRepos
-              .sort(
-                (a: pinnedRepoType, b: pinnedRepoType) =>
-                  new Date(
-                    repos.filter((x: repoType) => x.name === a.id)[0]?.created_at
-                  ).getTime() -
-                  new Date(repos.filter((y: repoType) => y.name === b.id)[0]?.created_at).getTime()
-              )
-              .reverse()
-              .map((data: pinnedRepoType, index) => (
-                <PinnedProjects
-                  key={index.toString()}
-                  repo={repos.filter((x: repoType) => x.name === data.id)[0]}
-                  left={index % 2 === 0}
-                  projectData={data}
-                />
-              ))}
-          </VStack>
-          <Heading fontSize={{ base: `5xl`, lg: `5xl` }} textAlign='center'>
-            Repositories
-          </Heading>
-          <Text mt={3}>A list of all of the public repositories on my GitHub.</Text>
-          <Button
-            as='a'
-            href='https://github.com/CarlosUziel'
-            variant='ghost'
-            colorScheme='brand'
-            size='lg'
-            mt={5}
-            leftIcon={<FaGithub />}
-          >
-            View My Profile
-          </Button>
-        </Flex>
+      <Flex
+        direction='column'
+        alignItems='center'
+        width={{ base: '95%', md: '90%', lg: '80%', xl: '90%W' }}
+        maxW='5xl'
+        mx='auto'
+        color={useColorModeValue(`brand.2`, `brand.0`)}
+        userSelect='none'
+        my={{ base: 6, md: 24 }}
+      >
+        <Heading
+          fontSize={{ base: `3xl`, sm: `4xl`, md: `5xl`, lg: `6xl` }}
+          textAlign='center'
+          color={useColorModeValue(`brand.2`, `brand.1`)}
+          fontWeight='semibold'
+        >
+          Projects
+        </Heading>
+        <Button
+          as='a'
+          href='https://github.com/CarlosUziel'
+          variant='ghost'
+          size='lg'
+          mt={2}
+          leftIcon={<FaGithub />}
+          _hover={{
+            bg: 'brand.1',
+            color: 'brand.2',
+          }}
+          rounded='full'
+          color={useColorModeValue(`brand.2`, `brand.0`)}
+        >
+          View My Profile
+        </Button>
+
+        <Heading
+          fontSize={{
+            base: 'xl',
+            sm: '2xl',
+            md: '3xl',
+            lg: '4xl',
+            xl: '5xl',
+          }}
+          textAlign='center'
+          mt={{ base: 8, md: 16 }}
+          color={useColorModeValue(`brand.2`, `brand.1`)}
+        >
+          Pinned Repositories
+        </Heading>
+        <Text
+          fontSize={{
+            base: 'xs',
+            sm: 'sm',
+            md: 'md',
+            lg: 'xl',
+            xl: 'xl',
+          }}
+        >
+          Some of my biggest projects
+        </Text>
+
+        <VStack
+          direction='column'
+          width='full'
+          height='full'
+          maxWidth='5xl'
+          spacing={10}
+          mt={{ base: 4, md: 8 }}
+        >
+          {pinnedRepos
+            .sort(
+              (a: pinnedRepoType, b: pinnedRepoType) =>
+                new Date(repos.filter((x: repoType) => x.name === a.id)[0]?.created_at).getTime() -
+                new Date(repos.filter((y: repoType) => y.name === b.id)[0]?.created_at).getTime()
+            )
+            .reverse()
+            .map((data: pinnedRepoType, index) => (
+              <PinnedProjects
+                key={index.toString()}
+                repo={repos.filter((x: repoType) => x.name === data.id)[0]}
+                left={index % 2 === 0}
+                projectData={data}
+              />
+            ))}
+        </VStack>
+
+        <Heading
+          fontSize={{
+            base: 'xl',
+            sm: '2xl',
+            md: '3xl',
+            lg: '4xl',
+            xl: '5xl',
+          }}
+          textAlign='center'
+          mt={{ base: 8, md: 16 }}
+          color={useColorModeValue(`brand.2`, `brand.1`)}
+        >
+          All Repositories
+        </Heading>
+        <Text
+          fontSize={{
+            base: 'xs',
+            sm: 'sm',
+            md: 'md',
+            lg: 'xl',
+            xl: 'xl',
+          }}
+        >
+          A list of all of the <chakra.span fontWeight='extrabold'>public</chakra.span> repositories
+          on my GitHub.
+        </Text>
 
         <SimpleGrid
           mt={10}
@@ -82,17 +163,13 @@ function Projects({ repos }: ProjectsProps): React.ReactElement {
               <RepoCard key={index.toString()} repo={repo} i={index} />
             ))}
         </SimpleGrid>
-      </Box>
+      </Flex>
     </>
   );
 }
 
 export async function getStaticProps(): Promise<{ props: ProjectsProps }> {
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_HOST || `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`}/api/github`
-  );
-
-  const { stars, repos, followers } = await response.json();
+  const { stars, repos, followers } = await getGHRepos();
 
   return { props: { stars, repos, followers, revalidate: 600 } };
 }

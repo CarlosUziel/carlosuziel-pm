@@ -15,23 +15,24 @@ const RepoCard = ({ repo, i }: RepoCardProps): JSX.Element => {
       href={repo.html_url}
       h='full'
       w='full'
-      isTruncated
-      overflow='visible'
+      border='2px solid'
+      borderColor='brand.1'
+      sx={{ backdropFilter: `saturate(180%) blur(5px)` }}
+      boxShadow='2xl'
+      transition='all 0.25s'
+      borderRadius='2xl'
+      overflow='hidden'
+      transitionTimingFunction='spring(1 100 10 10)'
+      _hover={{ transform: `translateY(-4px)`, shadow: `xl` }}
     >
       <VStack
         spacing={1}
         p={3}
-        bg={useColorModeValue(`white`, `gray.900`)}
         height='100%'
         width='100%'
         maxWidth='100%'
-        border='1px solid'
-        borderColor={useColorModeValue(`gray.200`, `gray.700`)}
         borderRadius='lg'
         boxShadow='lg'
-        transition='all 0.25s'
-        transitionTimingFunction='spring(1 100 10 10)'
-        _hover={{ transform: `translateY(-4px)`, shadow: `xl` }}
         textAlign='left'
         direction='column'
         pl={5}

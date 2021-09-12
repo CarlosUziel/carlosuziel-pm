@@ -35,6 +35,7 @@
     "framer-motion": "^4.1.8",
     "gray-matter": "4.0.3",
     "mdx-prism": "0.3.3",
+    "next-absolute-url": "1.2.2",
     "next-mdx-remote": "3.0.2",
     "next-plausible": "1.6.1",
     "next-seo": "4.24.0",

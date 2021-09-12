@@ -34,9 +34,9 @@ export default function Home(): React.ReactElement {
           lg: 'xl',
           xl: 'xl',
         }}
+        my={{ base: 6, md: 24 }}
       >
         <Heading
-          mt={{ base: 6, md: 24 }}
           fontSize={{ base: `3xl`, sm: `4xl`, md: `5xl`, lg: `6xl` }}
           textAlign='center'
           color={useColorModeValue(`brand.2`, `brand.1`)}

@@ -23,32 +23,30 @@ const PinnedProjects = ({ repo, projectData, left }: PinnedProjectsProps): JSX.E
   return (
     <Box h='full' w='full' my={5}>
       <VStack
-        bg={colorMode === 'light' ? `white` : `gray.900`}
         px={{ base: 4, md: 8 }}
+        sx={{ backdropFilter: `saturate(180%) blur(5px)` }}
         py={4}
         height='100%'
         width='100%'
-        border='1px solid'
-        borderColor={colorMode === 'light' ? `gray.200` : `gray.700`}
+        border='2px solid'
+        borderColor='brand.1'
         borderRadius='2xl'
         boxShadow='xl'
         textAlign='left'
         direction='column'
         justifyContent='flex-start'
         alignItems='flex-start'
-        isTruncated
         spacing={1}
       >
         <Flex
           direction={{ base: 'column', sm: 'row' }}
           maxWidth='full'
           width='full'
-          isTruncated
           justifyContent='space-between'
           alignItems='flex-start'
         >
           <Flex width='full' justifyContent='space-between'>
-            <Text fontSize={{ base: `2xl`, md: `4xl` }} fontWeight='bold' isTruncated maxW='100%'>
+            <Text fontSize={{ base: `2xl`, md: `4xl` }} fontWeight='bold' maxW='100%' pr={2}>
               {projectData.name}
             </Text>
             <Stack isInline justifyContent='flex-end' alignItems='center' spacing={4} mr={1}>
@@ -77,6 +75,7 @@ const PinnedProjects = ({ repo, projectData, left }: PinnedProjectsProps): JSX.E
           width='100%'
           whiteSpace='normal'
           pt={2}
+          textAlign='justify'
         >
           {projectData.longDescription}
         </Text>

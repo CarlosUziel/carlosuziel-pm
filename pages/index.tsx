@@ -14,6 +14,12 @@ import { NextSeo } from 'next-seo';
 
 export default function Home(): React.ReactElement {
   const [imageLoad, setImageLoad] = useState(false);
+  if (typeof window !== 'undefined') {
+    const hostname = window.location.hostname;
+    // eslint-disable-next-line no-console
+    console.log(hostname);
+  }
+
   return (
     <>
       <NextSeo title='Home' />

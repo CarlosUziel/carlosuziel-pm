@@ -12,7 +12,11 @@ export interface repoType {
   fork: boolean;
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
+export async function getGHRepos(): Promise<{
+  followers: any;
+  repos: any;
+  stars: any;
+}> {
   const userResponse = await fetch(`https://api.github.com/users/CarlosUziel`);
   const userReposResponse = await fetch(
     `https://api.github.com/users/CarlosUziel/repos?per_page=100`
@@ -26,8 +30,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const stars =
     notForked.reduce((a: number, r: { stargazers_count: number }) => a + r.stargazers_count, 0) ||
     null;
-
-  res.setHeader(`Cache-Control`, `public, s-maxage=1200, stale-while-revalidate=600`);
 
   const sendRepos = notForked.map(
     ({
@@ -52,9 +54,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       stargazers_count,
     })
   );
-  return res.status(200).json({
+  return {
     followers: user.followers,
     repos: sendRepos,
     stars,
-  });
+  };
 }
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
+  const { stars, repos, followers } = await getGHRepos();
+  res.setHeader(`Cache-Control`, `public, s-maxage=1200, stale-while-revalidate=600`);
+  return res.status(200).json({
+    stars,
+    repos,
+    followers,
+  });
+};
