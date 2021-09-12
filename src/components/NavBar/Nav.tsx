@@ -84,7 +84,7 @@ function Nav(): JSX.Element {
       top={0}
       left={0}
       zIndex={10}
-      sx={{ backdropFilter: `saturate(180%) blur(5px)` }}
+      backdropFilter='saturate(180%) blur(5px)'
       shadow='xl'
     >
       <chakra.nav mx={{ base: 2, lg: 5, xl: 10 }} py={1} px={{ base: 2, lg: 4 }}>

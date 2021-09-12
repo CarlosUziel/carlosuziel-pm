@@ -17,7 +17,7 @@ export const BibCard = ({ name, author, description, link, id, labels }: BibType
       transition='all 0.25s'
       transitionTimingFunction='spring(1 100 10 10)'
       _hover={{ transform: `translateY(-4px)`, shadow: `xl` }}
-      sx={{ backdropFilter: `saturate(180%) blur(5px)` }}
+      backdropFilter='saturate(180%) blur(5px)'
       p={3}
     >
       <Flex

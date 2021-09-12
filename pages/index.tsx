@@ -42,7 +42,7 @@ export default function Home(): React.ReactElement {
             boxSize='250px'
             borderRadius='full'
             bg='transparent'
-            sx={{ backdropFilter: `saturate(180%) blur(5px)` }}
+            backdropFilter='saturate(180%) blur(5px)'
             ringColor='brand.1'
             ring={1}
             m={2}

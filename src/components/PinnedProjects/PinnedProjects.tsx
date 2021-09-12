@@ -24,7 +24,7 @@ const PinnedProjects = ({ repo, projectData, left }: PinnedProjectsProps): JSX.E
     <Box h='full' w='full' my={5}>
       <VStack
         px={{ base: 4, md: 8 }}
-        sx={{ backdropFilter: `saturate(180%) blur(5px)` }}
+        backdropFilter='saturate(180%) blur(5px)'
         py={4}
         height='100%'
         width='100%'

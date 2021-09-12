@@ -30,7 +30,7 @@ const BlogPost = ({ frontMatter }: BlogPostProps): JSX.Element => {
           width='calc(100% -10px)'
           mx={'5px'}
           border='2px solid'
-          sx={{ backdropFilter: `saturate(180%) blur(5px)` }}
+          backdropFilter='saturate(180%) blur(5px)'
           boxShadow='2xl'
           transition='all 0.25s'
           borderRadius='2xl'

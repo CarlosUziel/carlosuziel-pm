@@ -59,7 +59,7 @@ const BlogLayout = ({ children, frontMatter }: BlogLayoutProps): JSX.Element => 
         width={{ base: '95%', md: '90%', lg: '80%', xl: '90%W' }}
         maxW='4xl'
         mx='auto'
-        sx={{ backdropFilter: `saturate(180%) blur(5px)` }}
+        backdropFilter='saturate(180%) blur(5px)'
         overflow='hidden'
         border='2px solid'
         borderRadius='2xl'

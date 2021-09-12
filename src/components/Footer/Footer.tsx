@@ -4,10 +4,7 @@ import SocialIcons from '../SocialIcons';
 
 const Footer = (): JSX.Element => {
   return (
-    <Box
-      sx={{ backdropFilter: `saturate(180%) blur(5px)` }}
-      color={useColorModeValue(`brand.2`, `brand.0`)}
-    >
+    <Box backdropFilter='saturate(180%) blur(5px)' color={useColorModeValue(`brand.2`, `brand.0`)}>
       <Flex
         m='auto'
         py={2}

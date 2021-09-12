@@ -21,7 +21,7 @@ export const ToolCard = ({ name, description, link, id, labels }: ToolType): JSX
   return (
     <Box as='a' href={link} height='100%'>
       <SimpleGrid
-        sx={{ backdropFilter: `saturate(180%) blur(5px)` }}
+        backdropFilter='saturate(180%) blur(5px)'
         p={3}
         height='100%'
         gridTemplateColumns='85px 1fr'
