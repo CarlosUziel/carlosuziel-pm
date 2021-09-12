@@ -266,11 +266,11 @@ export default function Home(): React.ReactElement {
                 >
                   <p className='text-justify'>
                     Magnetic resonance (MR) perfusion imaging non-invasively measures cerebral
-                    perfusion, which describes the blood's passage through the brain's vascular
-                    network. Therefore it is widely used to assess cerebral ischaemia. Convolutional
-                    Neural Networks (CNN) constitute the state-of-the-art method in automatic
-                    pattern recognition and hence, in segmentation tasks. But none of the CNN
-                    architectures developed to date have achieved high accuracy when segmenting
+                    perfusion, which describes the blood`&apos;`s passage through the brain`&apos;`s
+                    vascular network. Therefore it is widely used to assess cerebral ischaemia.
+                    Convolutional Neural Networks (CNN) constitute the state-of-the-art method in
+                    automatic pattern recognition and hence, in segmentation tasks. But none of the
+                    CNN architectures developed to date have achieved high accuracy when segmenting
                     ischaemic stroke lesions, being the main reasons their heterogeneity in
                     location, shape, size, image intensity and texture, especially in this imaging
                     modality. We use a freely available CNN framework, developed for MR imaging
