@@ -29,7 +29,7 @@ const BlogPost = ({ frontMatter }: BlogPostProps): JSX.Element => {
           direction='column'
           width='calc(100% -10px)'
           mx={'5px'}
-          border='2px solid'
+          border='1px solid'
           backdropFilter='saturate(180%) blur(5px)'
           boxShadow='2xl'
           transition='all 0.25s'

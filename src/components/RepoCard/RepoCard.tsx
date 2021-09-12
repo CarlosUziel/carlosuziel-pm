@@ -15,7 +15,7 @@ const RepoCard = ({ repo, i }: RepoCardProps): JSX.Element => {
       href={repo.html_url}
       h='full'
       w='full'
-      border='2px solid'
+      border='1px solid'
       borderColor='brand.1'
       boxShadow='lg'
       transition='all 0.25s'
