@@ -12,10 +12,14 @@ import {
   ListItem,
   AspectRatio,
   ChakraProps,
+  OrderedList,
+  List,
+  ListIcon,
 } from '@chakra-ui/react';
 import LineHeading from '../LineHeading';
 import React from 'react';
 import Image, { ImageProps } from 'next/image';
+import { ArrowRightIcon } from '@chakra-ui/icons';
 
 interface CustomLinkProps {
   href: string;
@@ -125,29 +129,25 @@ export const CustomTitle = (props: { children: JSX.Element[] }): JSX.Element => 
 
 export const CustomText = ({ children }: { children: React.ReactNode }): JSX.Element => {
   return (
-    <Text
-      fontSize={'lg'}
-      mt={4}
-      color={useColorModeValue('brand.2', 'brand.0')}
-      textAlign='justify'
-    >
+    <Text mt={4} color={useColorModeValue('brand.2', 'brand.0')} textAlign='justify'>
       {children}
     </Text>
   );
 };
 
 export const CustomUnorderedList = ({ children }: { children: React.ReactNode }): JSX.Element => {
-  return (
-    <UnorderedList fontSize='lg' spacing={'4px'} mt={3}>
-      {children}
-    </UnorderedList>
-  );
+  return <List mt={3}>{children}</List>;
+};
+
+export const CustomOrderedList = ({ children }: { children: React.ReactNode }): JSX.Element => {
+  return <OrderedList mt={3}>{children}</OrderedList>;
 };
 
 export const CustomListItem = ({ children }: { children: React.ReactNode }): JSX.Element => {
   return (
-    <ListItem color={useColorModeValue('brand.500', 'brand.300')}>
-      <chakra.span color={useColorModeValue('black', 'white')}>{children}</chakra.span>
+    <ListItem ml={4} color={useColorModeValue('brand.2', 'brand.0')}>
+      <ListIcon as={ArrowRightIcon} color={useColorModeValue('brand.2', 'brand.0')} />
+      <chakra.span fontStyle='italic'>{children}</chakra.span>
     </ListItem>
   );
 };

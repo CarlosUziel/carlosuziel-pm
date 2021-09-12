@@ -60,7 +60,7 @@ function Projects({ repos }: ProjectsProps): React.ReactElement {
           rounded='full'
           color={useColorModeValue(`brand.2`, `brand.0`)}
         >
-          View My Profile
+          My GitHub Profile
         </Button>
 
         <Heading

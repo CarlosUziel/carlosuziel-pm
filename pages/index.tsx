@@ -73,18 +73,22 @@ export default function Home(): React.ReactElement {
               fontSize={{ base: `5xl`, lg: `7xl` }}
               textAlign={{ base: `center`, lg: `left` }}
             >
-              Hi, I&apos;m Carlos Uziel!
+              Hi, I&apos;m Carlos!
             </Heading>
             <chakra.p maxW='650px' textAlign={{ base: `center`, lg: `left` }} fontSize='xl' mt={2}>
-              Welcome to my website! I use this to show some of my{' '}
+              Welcome to my portfolio website! Here I share stuff{' '}
+              <Link href='/about' passHref>
+                <ChakraLink>about me</ChakraLink>
+              </Link>{' '}
+              , including some of the{' '}
               <Link href='/projects' passHref>
                 <ChakraLink>projects</ChakraLink>
               </Link>{' '}
-              off, and test things out. Sometimes I even write{' '}
+              I have worked on and a{' '}
               <Link href='/blog' passHref>
-                <ChakraLink>blogs</ChakraLink>
-              </Link>
-              .
+                <ChakraLink>blog</ChakraLink>
+              </Link>{' '}
+              where I write stuff that I learn along the way.
             </chakra.p>
           </Flex>
         </Flex>

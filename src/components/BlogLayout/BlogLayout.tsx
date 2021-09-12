@@ -4,7 +4,6 @@ import { frontMatterType } from '@/utils/mdx';
 import BlogBadge from '../BlogBadge';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
-import { Global, css } from '@emotion/react';
 
 interface BlogLayoutProps {
   children: React.ReactNode;
@@ -15,14 +14,6 @@ const BlogLayout = ({ children, frontMatter }: BlogLayoutProps): JSX.Element => 
   const router = useRouter();
   return (
     <>
-      {/*Allows anchor link to not get stuck under nav bar */}
-      <Global
-        styles={css`
-          * {
-            scroll-padding-top: 80px;
-          }
-        `}
-      />
       <NextSeo
         title={frontMatter.title}
         description={frontMatter.summary}
@@ -68,8 +59,7 @@ const BlogLayout = ({ children, frontMatter }: BlogLayoutProps): JSX.Element => 
           base: 'xs',
           sm: 'sm',
           md: 'md',
-          lg: 'xl',
-          xl: '2xl',
+          lg: 'lg',
         }}
       >
         <Flex

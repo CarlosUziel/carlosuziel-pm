@@ -12,19 +12,21 @@ import {
   CustomCode,
   CustomDiv,
   TextColorMode,
-} from './MDXComponents'
-import Sparkles from '../Sparkles'
-import { Checkbox, VStack } from '@chakra-ui/react'
+  CustomOrderedList,
+} from './MDXComponents';
+import Sparkles from '../Sparkles';
+import { Checkbox, VStack } from '@chakra-ui/react';
 
-const titles: any = {}
+const titles: any = {};
 new Array(6).fill('').forEach((x, i) => {
-  titles['h' + (i + 1).toString()] = CustomTitle
-})
+  titles['h' + (i + 1).toString()] = CustomTitle;
+});
 
 const MDXComponents = {
   a: CustomLink,
   p: CustomText,
   ul: CustomUnorderedList,
+  ol: CustomOrderedList,
   li: CustomListItem,
   pre: CustomPre,
   code: CustomCode,
@@ -38,6 +40,6 @@ const MDXComponents = {
   Image: CustomImage,
   Sparkles,
   ...titles,
-}
+};
 
-export default MDXComponents
+export default MDXComponents;
