@@ -5,7 +5,6 @@ import {
   Link as ChakraLink,
   Text,
   Flex,
-  UnorderedList,
   BoxProps,
   useColorModeValue,
   chakra,
