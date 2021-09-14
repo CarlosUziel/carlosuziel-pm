@@ -48,7 +48,7 @@ export default function MyApp({ Component, pageProps }: AppProps): React.ReactEl
             },
           ],
         }}
-        description='Personal portfolio website.'
+        description='Personal portfolio website'
       />
       <ChakraProvider theme={theme}>
         <QueryClientProvider client={queryClient}>
