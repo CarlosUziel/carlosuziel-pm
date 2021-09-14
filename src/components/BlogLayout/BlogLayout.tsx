@@ -17,7 +17,7 @@ const BlogLayout = ({ children, frontMatter }: BlogLayoutProps): JSX.Element => 
       <NextSeo
         title={frontMatter.title}
         description={frontMatter.summary}
-        canonical={`https://carlosuziel.pm${router.asPath}`}
+        canonical={`https://carlosuziel-pm.vercel.app${router.asPath}`}
         twitter={{
           cardType: 'summary_large_image',
           site: '@perez_malla',
@@ -26,14 +26,14 @@ const BlogLayout = ({ children, frontMatter }: BlogLayoutProps): JSX.Element => 
           title: frontMatter.title,
           site_name: 'Carlos Uziel',
           description: frontMatter.summary,
-          url: `https://carlosuziel.pm${router.asPath}`,
+          url: `https://carlosuziel-pm.vercel.app${router.asPath}`,
           type: 'article',
           article: {
             publishedTime: new Date(frontMatter.publishedAt).toISOString(),
           },
           images: [
             {
-              url: `https://carlosuziel.pm${frontMatter.image}`,
+              url: `https://carlosuziel-pm.vercel.app${frontMatter.image}`,
             },
           ],
         }}

@@ -44,33 +44,25 @@ export default function MyApp({ Component, pageProps }: AppProps): React.ReactEl
           site_name: `Carlos Uziel`,
           images: [
             {
-              url: `https://www.carlosuziel.pm/static/images/portrait_nobg.png`,
+              url: `https://www.carlosuziel-pm.vercel.app/static/images/portrait_nobg.png`,
               alt: `Profile Picture`,
             },
           ],
         }}
-        description='Personal portfolio page with a blogs.'
+        description='Personal portfolio website.'
       />
       <ChakraProvider theme={theme}>
-        <PlausibleProvider
-          domain='carlosuziel.pm'
-          selfHosted
-          trackOutboundLinks
-          enabled={process.env.NODE_ENV === 'production'}
-          customDomain={'https://stats.carlosuziel.pm'}
-        >
-          <QueryClientProvider client={queryClient}>
-            <MDXProvider components={MDXComponents}>
-              {loading ? (
-                <Loader />
-              ) : (
-                <AppLayout>
-                  <Component {...pageProps} />
-                </AppLayout>
-              )}
-            </MDXProvider>
-          </QueryClientProvider>
-        </PlausibleProvider>
+        <QueryClientProvider client={queryClient}>
+          <MDXProvider components={MDXComponents}>
+            {loading ? (
+              <Loader />
+            ) : (
+              <AppLayout>
+                <Component {...pageProps} />
+              </AppLayout>
+            )}
+          </MDXProvider>
+        </QueryClientProvider>
       </ChakraProvider>
     </>
   );
