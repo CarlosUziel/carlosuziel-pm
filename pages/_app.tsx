@@ -6,7 +6,6 @@ import React, { useState, useEffect } from 'react';
 import Router from 'next/router';
 import Loader from '@/components/Loader';
 import { DefaultSeo } from 'next-seo';
-import PlausibleProvider from 'next-plausible';
 import AppLayout from '@/components/AppLayout';
 import theme from '../src/theme';
 import MDXComponents from '@/components/MDXComponents';
