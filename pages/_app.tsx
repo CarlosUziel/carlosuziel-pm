@@ -43,7 +43,7 @@ export default function MyApp({ Component, pageProps }: AppProps): React.ReactEl
           site_name: `Carlos Uziel`,
           images: [
             {
-              url: `https://www.carlosuziel-pm.vercel.app/static/images/portrait.jpeg`,
+              url: `https://www.carlosuziel-pm.dev/static/images/portrait.jpeg`,
               alt: `Profile Picture`,
             },
           ],

@@ -16,8 +16,8 @@ const AppLayout = ({ children }: AppLayoutProps): JSX.Element => {
   return (
     <>
       <NextSeo
-        canonical={`https://www.carlosuziel-pm.vercel.app/${router.asPath}`}
-        openGraph={{ url: `https://www.carlosuziel-pm.vercel.app/${router.asPath}` }}
+        canonical={`https://www.carlosuziel-pm.dev/${router.asPath}`}
+        openGraph={{ url: `https://www.carlosuziel-pm.dev/${router.asPath}` }}
       />
       <Box position='fixed' minH='100vh' minW='100vw' top={0} left={0} zIndex={-500} bg='brand.2'>
         <Particles
