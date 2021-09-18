@@ -34,7 +34,6 @@ function Projects({ repos }: ProjectsProps): React.ReactElement {
         maxW='5xl'
         mx='auto'
         color={useColorModeValue(`brand.2`, `brand.0`)}
-        userSelect='none'
         my={{ base: 6, md: 24 }}
       >
         <Heading

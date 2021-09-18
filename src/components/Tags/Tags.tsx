@@ -12,6 +12,7 @@ const Tags = ({ tags }: TagsProps): JSX.Element => {
     <Stack height='25px' isInline>
       {tags?.map(tag => (
         <Tag
+          userSelect='none'
           key={tag}
           colorScheme={`${
             ['red', 'orange', 'yellow', 'green', 'brand', 'teal', 'blue', 'cyan', 'pink', 'purple'][
