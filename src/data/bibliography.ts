@@ -39,6 +39,15 @@ const Bibs: BibType[] = [
     author: `Michael M. Bronstein, Joan Bruna, Taco Cohen, Petar Veličković`,
     description: `Geometric Deep Learning is an attempt for geometric unification of a broad class of ML problems from the perspectives of symmetry and invariance. These principles not only underlie the breakthrough performance of convolutional neural networks and the recent success of graph neural networks but also provide a principled way to construct new types of problem-specific inductive biases.`,
   },
+  {
+    id: `full_stack_deep_learning`,
+    category: [`courses`],
+    link: `https://fullstackdeeplearning.com/`,
+    labels: [`FullStack`, `MLOps`, `Machine Learning`],
+    name: `Full Stack Deep Learning`,
+    author: `Sergey Karayev, Josh Tobin, Pieter Abbeel`,
+    description: `Our mission is to help you go from a promising ML experiment to a shipped product, with real-world impact. The course is aimed at people who already know the basics of deep learning and want to understand the rest of the process of creating production deep learning systems.`,
+  },
   // books
   {
     id: `art_statistics`,
@@ -93,6 +102,43 @@ const Bibs: BibType[] = [
     name: `Network Science`,
     author: `Albert-László Barabási`,
     description: `The power of network science, the beauty of network visualization.`,
+  },
+  {
+    id: `statistical_learning`,
+    category: [`books`],
+    link: `https://www.statlearning.com/`,
+    labels: [`Statistics`, `R`],
+    name: `An Introduction to Statistical Learning (2nd Edition)`,
+    author: `Gareth James, Daniela Witten, Trevor Hastie, Rob Tibshirani`,
+    description: `As the scale and scope of data collection continue to increase across virtually all fields, statistical learning has become a critical toolkit for anyone who wishes to understand data. An Introduction to Statistical Learning provides a broad and less technical treatment of key topics in statistical learning. Each chapter includes an R lab. This book is appropriate for anyone who wishes to use contemporary tools for data analysis.`,
+  },
+  {
+    id: `interpretable_ml`,
+    category: [`books`],
+    link: `https://christophm.github.io/interpretable-ml-book/`,
+    labels: [`Interpretable`, `Machine Learning`],
+    name: `Interpretable Machine Learning: A Guide for Making Black Box Models Explainable`,
+    author: `Christoph Molnar`,
+    description: `Machine learning has great potential for improving products, processes and research. But computers usually do not explain their predictions which is a barrier to the adoption of machine learning. This book is about making machine learning models and their decisions interpretable.`,
+  },
+  {
+    id: `computational_genomics`,
+    category: [`books`],
+    link: `https://compgenomr.github.io/book/`,
+    labels: [`Computational Biology`, `Genomics`, `R`],
+    name: `Computational Genomics with R`,
+    author: `Altuna Akalin`,
+    description: `The aim of this book is to provide the fundamentals for data analysis for genomics. We developed this book based on the computational genomics courses we are giving every year. We have had invariably an interdisciplinary audience with backgrounds from physics, biology, medicine, math, computer science or other quantitative fields. We want this book to be a starting point for computational genomics students and a guide for further data analysis in more specific topics in genomics. This is why we tried to cover a large variety of topics from programming to basic genome biology. As the field is interdisciplinary, it requires different starting points for people with different backgrounds. A biologist might skip sections on basic genome biology and start with R programming, whereas a computer scientist might want to start with genome biology. In the same manner, a more experienced person might want to refer to this book when needing to do a certain type of analysis, but having no prior experience.`,
+  },
+  // other
+  {
+    id: `collegue_compendium`,
+    category: [`other`],
+    link: `https://collegecompendium.org/`,
+    labels: [`Courses Collection`, `Texbooks`, `Computer Science`],
+    name: `Collegue Compendium`,
+    author: `College Compendium Nonprofit Corporation`,
+    description: `Audit Over 1000 CS Classes from Top Universities. Learn at your own pace with a curated collection of free and open source computer science resources from top colleges`,
   },
 ];
 export default Bibs;

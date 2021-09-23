@@ -10,6 +10,7 @@ export interface ToolType {
 }
 
 const Tools: ToolType[] = [
+  // development
   {
     id: `vscode`,
     category: [`development`],
@@ -34,14 +35,25 @@ const Tools: ToolType[] = [
     name: `JupyterLab`,
     description: `A web-based interactive development environment for Jupyter notebooks, code and data.`,
   },
+  // research
   {
     id: `mendeley`,
     category: [`research`],
     link: `https://www.mendeley.com/`,
-    labels: [`Reference Manager`, `Research Library `],
+    labels: [`Reference Manager`, `Research Library`],
     name: `Mendeley`,
     description: `Used to manage and share research papers and generate bibliographies for scholarly articles.`,
   },
+  // visualization
+  {
+    id: `biorender`,
+    category: [`visualization`],
+    link: `https://biorender.com/`,
+    labels: [`Publication Figures`, `Online`],
+    name: `BioRender`,
+    description: `Create Professional Science Figures in Minutes. Browse thousands of pre-made icons and templates from more than 30 fields of life sciences.`,
+  },
+  // productivity
   {
     id: `todoist`,
     category: [`productivity`],

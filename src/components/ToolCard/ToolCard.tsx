@@ -60,13 +60,7 @@ export const ToolCard = ({ name, description, link, id, labels }: ToolType): JSX
               left='50%'
               transform='translate(-50%, -50%)'
               position='absolute'
-              src={
-                id === `biorender`
-                  ? colorMode === 'light'
-                    ? `./static/images/toolImages/${id}.png`
-                    : `./static/images/toolImages/${id}dark.png`
-                  : `./static/images/toolImages/${id}.png`
-              }
+              src={`./static/images/toolImages/${id}.png`}
               maxHeight='80%'
               maxWidth='80%'
             />
