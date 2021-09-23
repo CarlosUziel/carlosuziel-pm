@@ -30,6 +30,15 @@ const Bibs: BibType[] = [
     author: `Prof. Manolis Kellis`,
     description: `This course introduces foundations and state-of-the-art machine learning challenges in genomics and the life sciences more broadly. `,
   },
+  {
+    id: `geometric_deep_learning_course`,
+    category: [`courses`],
+    link: `https://geometricdeeplearning.com/lectures/`,
+    labels: [`Grids`, `Groups`, `Graphs`, `Geodesics`, `Machine Learning`],
+    name: `Geometric Deep Learning`,
+    author: `Michael M. Bronstein, Joan Bruna, Taco Cohen, Petar Veličković`,
+    description: `Geometric Deep Learning is an attempt for geometric unification of a broad class of ML problems from the perspectives of symmetry and invariance. These principles not only underlie the breakthrough performance of convolutional neural networks and the recent success of graph neural networks but also provide a principled way to construct new types of problem-specific inductive biases.`,
+  },
   // books
   {
     id: `art_statistics`,
@@ -61,11 +70,29 @@ const Bibs: BibType[] = [
   {
     id: `craft_research`,
     category: [`books`],
-    link: `https://press.uchicago.edu/ucp/books/book/chicago/C/bo23521678.html  `,
+    link: `https://press.uchicago.edu/ucp/books/book/chicago/C/bo23521678.html`,
     labels: [`Research`, `Writing`],
     name: `The Craft of Research`,
     author: `Wayne C. Booth et al.`,
     description: `Learn how to conduct effective and meaningful research. This fundamental work explains how to find and evaluate sources, anticipate and respond to reader reservations, and integrate these pieces into an argument that stands up to reader critique.`,
+  },
+  {
+    id: `geometric_deep_learning_book`,
+    category: [`books`],
+    link: `https://arxiv.org/abs/2104.13478`,
+    labels: [`Grids`, `Groups`, `Graphs`, `Geodesics`, `Machine Learning`],
+    name: `Geometric Deep Learning`,
+    author: `Michael M. Bronstein, Joan Bruna, Taco Cohen, Petar Veličković`,
+    description: `The last decade has witnessed an experimental revolution in data science and machine learning, epitomised by deep learning methods. Indeed, many high-dimensional learning tasks previously thought to be beyond reach -- such as computer vision, playing Go, or protein folding -- are in fact feasible with appropriate computational scale. Remarkably, the essence of deep learning is built from two simple algorithmic principles: first, the notion of representation or feature learning, whereby adapted, often hierarchical, features capture the appropriate notion of regularity for each task, and second, learning by local gradient-descent type methods, typically implemented as backpropagation. While learning generic functions in high dimensions is a cursed estimation problem, most tasks of interest are not generic, and come with essential pre-defined regularities arising from the underlying low-dimensionality and structure of the physical world. This text is concerned with exposing these regularities through unified geometric principles that can be applied throughout a wide spectrum of applications. Such a 'geometric unification' endeavour, in the spirit of Felix Klein's Erlangen Program, serves a dual purpose: on one hand, it provides a common mathematical framework to study the most successful neural network architectures, such as CNNs, RNNs, GNNs, and Transformers. On the other hand, it gives a constructive procedure to incorporate prior physical knowledge into neural architectures and provide principled way to build future architectures yet to be invented.`,
+  },
+  {
+    id: `network_science`,
+    category: [`books`],
+    link: `http://networksciencebook.com/`,
+    labels: [`Networks`],
+    name: `Network Science`,
+    author: `Albert-László Barabási`,
+    description: `The power of network science, the beauty of network visualization.`,
   },
 ];
 export default Bibs;

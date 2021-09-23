@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Box,
   Flex,
@@ -115,7 +114,6 @@ function Tools(): React.ReactElement {
                 other
               </Tab>
             </TabList>
-
             <TabPanels>
               <TabPanel>
                 <BibGrid filter='courses' />
