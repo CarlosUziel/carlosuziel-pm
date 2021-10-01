@@ -48,10 +48,18 @@ const Tools: ToolType[] = [
   {
     id: `biorender`,
     category: [`visualization`],
-    link: `https://biorender.com/`,
+    link: `https://gephi.org/`,
     labels: [`Publication Figures`, `Online`],
     name: `BioRender`,
     description: `Create Professional Science Figures in Minutes. Browse thousands of pre-made icons and templates from more than 30 fields of life sciences.`,
+  },
+  {
+    id: `gephi`,
+    category: [`visualization`],
+    link: `https://biorender.com/`,
+    labels: [`Graphs`, `GUI`, `Network Analysis`],
+    name: `Gephi`,
+    description: `Gephi is the leading visualization and exploration software for all kinds of graphs and networks. Gephi is open-source and free.`,
   },
   // productivity
   {
