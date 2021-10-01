@@ -10,7 +10,7 @@ This is the codebase for my personal portfolio website. **Please avoid entering 
 If you want to read about the motivation behind this project, feel free to read [my first blog post](https://www.carlosuziel-pm.dev/blog/portfolio).
 
 
-## Installation
+## Local Deployment
 Ensure you have an updated version of [Node.js](https://nodejs.org/en/). Then, in your favorite terminal:
 ```bash
 git clone https://github.com/CarlosUziel/carlosuziel-pm
