@@ -130,6 +130,16 @@ const Bibs: BibType[] = [
     author: `Altuna Akalin`,
     description: `The aim of this book is to provide the fundamentals for data analysis for genomics. We developed this book based on the computational genomics courses we are giving every year. We have had invariably an interdisciplinary audience with backgrounds from physics, biology, medicine, math, computer science or other quantitative fields. We want this book to be a starting point for computational genomics students and a guide for further data analysis in more specific topics in genomics. This is why we tried to cover a large variety of topics from programming to basic genome biology. As the field is interdisciplinary, it requires different starting points for people with different backgrounds. A biologist might skip sections on basic genome biology and start with R programming, whereas a computer scientist might want to start with genome biology. In the same manner, a more experienced person might want to refer to this book when needing to do a certain type of analysis, but having no prior experience.`,
   },
+  // videos
+  {
+    id: `mlst_60`,
+    category: [`videos`],
+    link: `https://www.youtube.com/watch?v=bIZB1hIJ4u8`,
+    labels: [`Machine Learning`, `Geometric Deep Learning`, `Mathematics`],
+    name: ` Machine Learning Street Talk #60: Geometric Deep Learning Blueprint (Special Edition)`,
+    author: `Dr. Tim Scarfe, Dr. Yannic Kilcher and Dr. Keith Duggar`,
+    description: `Geometric Deep Learning unifies a broad class of ML problems from the perspectives of symmetry and invariance. These principles not only underlie the breakthrough performance of convolutional neural networks and the recent success of graph neural networks but also provide a principled way to construct new types of problem-specific inductive biases.`,
+  },
   // other
   {
     id: `collegue_compendium`,
